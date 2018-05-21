@@ -141,7 +141,37 @@ function showPosition(position) {
 <button onclick="getLocation()">Szukaj</button>
 
 <p id="demo"></p>
+	<script>
+	function geoFindMe() {
+		var output = document.getElementById("out");
 
+		if (!navigator.geolocation){
+			output.innerHTML = "<p>Twoja przeglądarka nie wspiera geolokalizacji.</p>";
+			return;
+		}
+
+		function success(position) {
+			var latitude  = position.coords.latitude;
+			var longitude = position.coords.longitude;
+
+    output.innerHTML = '<p>Latitude is ' + latitude + '° <br>Longitude is ' + longitude + '°</p>';
+
+    var img = new Image();
+    img.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + latitude + "," + longitude + "&zoom=13&size=300x300&sensor=false";
+
+    output.appendChild(img);
+  }
+
+  function error() {
+    output.innerHTML = "Nie można wykryć Twojej lokalizacji";
+  	}
+
+    output.innerHTML = "<p>Locating…</p>";
+
+  navigator.geolocation.getCurrentPosition(success, error);
+}
+
+	</script>
   <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d40987.08121893345!2d19.935176!3d50.05459!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spl!2spl!4v1526405250803" width="1300" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
 	<div id="map"></div>
   </body>
