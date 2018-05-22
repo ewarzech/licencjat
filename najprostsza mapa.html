@@ -22,47 +22,7 @@
                         mapTypeIds: ['Styled']
                     },
                 center: new google.maps.LatLng(52.173931692568, 18.8525390625),
-				<!-- styles: [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#333333"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]}] -->
-                };
-			var styles = [
-                    // USTAWIENIA WYGLADU MAPY
-                    {
-                        featureType: 'water', // woda
-                        elementType: 'geometry.fill', // wypelnienie
-                        stylers: [
-                            {color: '#1ab8ca'}, // kolor,
-                            {lightness: 60} // rozjasnienie
-                        ]
-                    }, {
-                        featureType: 'landscape.natural', // teren
-                        elementType: 'all',
-                        stylers: [
-                            {hue: '#66FF00'}, // odcien
-                            {lightness: 19} // rozjasnienie
-                        ]
-                    }, {
-                        featureType: 'road.local', // drogi lokalne
-                        elementType: 'geometry.fill', // wypelnienie
-                        stylers: [
-                            {color: '#a5a5a2'}, // kolor
-                            {weight: 0.6} // grubosc
-                        ]
-                    }, {
-                        featureType: 'road.arterial', // arterie
-                        elementType: 'geometry.fill', // wypelnienie
-                        stylers: [
-                            {color: '#7a7a7a'}, // kolor
-                            {weight: 1.0} // grubosc
-                        ]
-                    }, {
-                        featureType: 'road.highway', // autostrada
-                        elementType: 'geometry.fill', // wypelnienie
-                        stylers: [
-                            {color: '#32322b'}, // kolor
-                            {weight: 1.4} // grubosc
-                        ]
-                    }
-                ];	
+					
 				var mapElement = document.getElementById('map');
 
                 // Create the Google Map using our element and options defined above
@@ -118,7 +78,6 @@ function showPosition(position) {
 }
 
 </script>
-
  
 </head>
  
@@ -163,5 +122,4 @@ function showPosition(position) {
   <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d40987.08121893345!2d19.935176!3d50.05459!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spl!2spl!4v1526405250803" width="1300" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
 	<div id="map"></div>
   </body>
-</html>
 </html>
