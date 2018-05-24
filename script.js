@@ -1,23 +1,26 @@
-function geoFindMe(){
-     navigator.geolocation.getCurrentPosition(success, error, geo_options);
- 
-function success(position) {
- var latitude = position.coords.latitude;
- var longitude = position.coords.longitude;
- var altitude = position.coords.altitude;
- var accuracy = position.coords.accuracy;
- 
- //do something with above position thing e.g. below
- alert('I am here! lat:' + latitude +' and long : ' +longitude );
-}
- 
-function error(error) {
- alert("Unable to retrieve your location due to "+error.code + " : " + error.message);
- };
- 
-var geo_options = {
- enableHighAccuracy: true,
- maximumAge : 30000,
- timeout : 27000
- };
+function initMap() {
+  var myLatLng = {lat: 50.070857499999995, lng: 19.925147};
+  var myLatLng2 = {lat: 50.062143, lng: 50.062143};
+
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 15,
+    center: myLatLng
+  });
+
+  var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    title: 'Tu jestem!'
+  });
+  var marker = new google.maps.Marker({
+    position: new google.maps.LatLng(50.064708, 19.916431),
+    map: map,
+    title: 'Park Jordana od ul. Reymonta'
+  });
+  var marker = new google.maps.Marker({
+    position: new google.maps.LatLng(50.062143, 19.937548),
+    map: map,
+    title: 'Rynek Główny'
+  });
+  
 }
